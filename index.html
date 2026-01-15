@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Audio Player</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Seite zentrieren */
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffffff;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Großer runder Play-Button */
+    .play-button {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      font-size: 36px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 6px 10px rgba(0,0,0,0.25);
+      transition: background-color 0.2s, transform 0.1s;
+    }
+
+    .play-button:active {
+      background-color: #0056b3;
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+<body>
+  <!-- Button, der Audio startet -->
+  <button class="play-button" onclick="document.getElementById('audio').play()">▶︎</button>
+
+  <!-- MP3-Datei -->
+  <audio id="audio" src="audio.mp3"></audio>
+</body>
+</html>
